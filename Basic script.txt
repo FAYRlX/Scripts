@@ -1,0 +1,7 @@
+@echo off
+title made by FAYRIX
+
+echo hello
+echo.
+echo click to exit
+pause >nul
