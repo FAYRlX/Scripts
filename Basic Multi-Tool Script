@@ -1,0 +1,67 @@
+:setting
+@echo off
+cls
+title made for a test
+color 3
+chcp 65001 >nul
+
+
+:password
+cls
+echo.
+echo Password needed!
+echo.
+set /p input= /
+if "%input%"=="123" goto correct
+
+
+:wrong-password
+echo.
+echo Wrong password!
+pause
+goto password
+
+
+:correct
+echo.
+echo Correct password
+echo.
+echo Logging in!
+timeout 3 >nul
+goto script loading
+
+
+:script loading
+echo.
+echo Loading script
+timeout 3 >nul
+echo.
+echo Done
+timeout 2 >nul
+goto menu
+
+
+
+:menu
+cls
+echo.
+echo  █████╗ ███████╗██████╗ ███████╗
+echo ██╔══██╗██╔════╝██╔══██╗██╔════╝
+echo ███████║███████╗██║  ██║█████╗  
+echo ██╔══██║╚════██║██║  ██║██╔══╝  
+echo ██║  ██║███████║██████╔╝██║     
+echo ╚═╝  ╚═╝╚══════╝╚═════╝ ╚═╝     
+echo        Made by FAYRIX
+echo.
+echo ║
+echo ╠═(1) Github
+echo ║
+echo ╠══(2) Youtube
+echo ║
+echo ╠═══(3) Coming soom
+echo ║
+set /p input= ╚════
+if "%input%"=="1" start https://github.com/FAYRlX/Scripts
+if "%input%"=="2" start https://m.youtube.com/
+if "%input%"=="3" goto menu
+goto menu
